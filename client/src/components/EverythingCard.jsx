@@ -1,19 +1,24 @@
 import React from "react";
+import Defaultimage from "../assets/newsimage.png"
 
 function Card(props) {
   return (
-    <div className="everything-card mt-10">
+    <div className="everything-card mt-20">
       <div className="everything-card flex flex-wrap p-5 gap-1 mb-1">
         <b className="title">{props.title}</b>
         <div className="everything-card-img mx-auto">
-          <img className="everything-card-img" src={props.imgUrl} alt="img" />
+          <img className="everything-card-img" src={props.imgUrl || Defaultimage} alt="img"
+          onError={(e) => {
+            e.target.onerror= null;
+            e.target.src = Defaultimage;
+          }} />
         </div>
         <div className="description">
           <p className="description-text leading-7">
             {props.description?.substring(0, 200)}
           </p>
         </div>
-        <div className="info">
+        {/* <div className="info">
           <div className="source-info flex items-center gap-2">
             <span className="font-semibold">Source:</span>
             <a
@@ -34,6 +39,19 @@ function Card(props) {
               ({props.publishedAt})
             </p>
           </div>
+        </div> */}
+        <div>
+            
+            <a type="button" style={{backgroundColor :"var(--btn-background)" , color:"var(--primary)"}}className="inline-flex gap-2 mr-2 border border-gray-600 bg-red-500 rounded p-2"
+              href={props.url}
+              target="_blank"
+            >
+              <span className="">Read More</span>
+              <span className="mt-0.5">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 15 15"><path fill="black" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"/></svg>
+              </span>
+            </a>   
+          
         </div>
       </div>
 

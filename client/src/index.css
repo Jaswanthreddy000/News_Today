@@ -14,28 +14,35 @@ html, body {
     scroll-behavior: smooth;
 }
 
+
+
 .light-theme {
-    --background: url("https://tailwindcss.com/_next/static/media/hero@75.b2469a49.jpg");
-    --primary: #F8FAFC;
-    --secondary: #0F172A;
-    --txt: #000;
-    --heading: #2dd9fe;
-    --btn-color: #fff;
-    --btn-background: #5f99be;
-    --search-background: #000;
-    --c: #2dd9fe;
+    --background: #F9FAFB;
+    --primary: #FFFFFF;
+    --secondary: #0A0A0A;
+    --txt: #212121;
+    --heading: #212121;
+    --btn-color:#00ACC1 ;
+    --btn-background: #00838F;
+    --search-background: #E0F7FA;
+    --c: #00ACC1;
     --hover_bg_change: backdrop-filter:6px;
+    --navbar-bg:#00ACC1;
+    --readmore-bg:black;
+
 }
 
 .dark-theme {
-    --background: url("https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg");
-    --primary: rgb(30,41,59);
-    --secondary: #D5DDF0;
-    --txt: #fff;
-    --heading: #4666FF;
-    --btn-color: #000;
-    --btn-background: #5f99be;
-    --search-background: #18181b;
+    --background: #121212;
+    --primary: #1E1E1E;
+    --secondary: #E0E0E0;
+    --txt: #FAFAFA;
+    --heading: #FAFAFA;
+    --btn-color:   #FF7043;
+    --btn-background: #FF7043;
+    --search-background: #333333;
+    --navbar-bg:#FF7043;
+    --readmore-bg:white;
 }
 
 body {
@@ -177,8 +184,13 @@ ul li ul li a:hover {
     align-items: center;
 }
 
-.fa-moon {color: #f1c40f;}
-.fa-sun {color: #f39c12;}
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
 
 .checkbox-label .ball {
     background-color: #fff;
@@ -192,8 +204,9 @@ ul li ul li a:hover {
 }
 
 .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(24px);
+    transform: translateX(10px);
 }
+
 
 .search-box {
     background: var(--primary);
